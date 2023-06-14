@@ -1,0 +1,46 @@
+@import '../../styles/variables.scss';
+
+.content {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .logo {
+        width: 50%;
+        position: relative;
+    }
+
+    input {
+        width: 350px !important;
+    }
+
+    .actions {
+
+        margin-top: 10px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column;
+        
+        button, a {
+            margin: 5px;
+        }
+
+        a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .button_to_enter {
+            background-color: $blue !important;
+            width: 200px;
+        }
+
+    }
+
+}
