@@ -9,7 +9,7 @@ const Login = () => {
     const navigate = useNavigate();
 
     return (
-        <div className='content'>
+        <div className='login_content'>
             <img src={logo} className='logo' alt='logo condogenius' />
             <input type="text" placeholder="Digite seu e-mail" />
             <input type="password" placeholder="Digite sua senha" />
