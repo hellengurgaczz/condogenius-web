@@ -6,7 +6,7 @@ import './reservations.scss';
 
 const Reservations = () => (
   <div className='content_header'>
-    <h1>Reservas</h1>
+    <h1>Reservas de áreas comuns</h1>
     <div className='areas_content'>
       { CardContent() }
     </div>

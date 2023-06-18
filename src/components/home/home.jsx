@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../navbar/navbar';
 import Sidebar from '../../sidebar/sidebar';
+
 import Residents from '../residents/residents';
 import Complaints from '../complaints/complaints';
 import Reservations from '../reservations/reservations';
@@ -15,7 +16,7 @@ const Home = () => (
     <div className='content_home'>
       <Sidebar />
       <div className='context'>
-        <Reservations />
+        <Complaints />
       </div>
     </div>
   </div>

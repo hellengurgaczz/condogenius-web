@@ -4,6 +4,7 @@ import { Button } from 'react-materialize';
 
 import './complaints.scss';
 
+
 const Complaints = () => (
   <div className='content_header'>
     <h1>Reclamações</h1>

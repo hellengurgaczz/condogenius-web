@@ -12,7 +12,7 @@ const Navbar = () => {
       <img src={logo} alt="Logo" className="logo" />
       <div className="menu">
         <a href="#">Perfil<BsPersonCircle /></a>
-        <MdExitToApp />
+        <MdExitToApp className='logout_icon'/>
       </div>
     </div>
   );

@@ -1,11 +1,15 @@
 @import '../../styles/variables.scss';
 
 body {
-    background-color: black !important;
+    background-image: url('../../assets/condominio.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.login_content {
-    background-color: white;
+.card_content {
+    background-color: rgba(255, 255, 255, 0.891);
+    z-index: 1000;
+    opacity: none;
     height: 600px;
     border-radius: 8px;
     display: flex;
@@ -20,6 +24,7 @@ body {
 
     .logo {
         width: 60%;
+        
         position: relative;
     }
 
@@ -28,7 +33,6 @@ body {
     }
 
     .actions {
-
         margin-top: 10px;
         display: flex;
         justify-items: center;
@@ -49,7 +53,5 @@ body {
             width: 200px;
             font-weight: bold;
         }
-
     }
-
 }

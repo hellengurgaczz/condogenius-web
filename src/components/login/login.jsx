@@ -10,12 +10,14 @@ const Login = () => {
 
     return (
         <div className='login_content'>
-            <img src={logo} className='logo' alt='logo condogenius' />
-            <input type="text" placeholder="Digite seu e-mail" />
-            <input type="password" placeholder="Digite sua senha" />
-            <div className='actions'>
-                <Button className='button_to_enter' onClick={() => {navigate('/home')}}>Entrar</Button>
-                <a href=''>Cadastre-se</a>
+            <div className='card_content'>
+                <img src={logo} className='logo' alt='logo condogenius' />
+                <input type="text" placeholder="Digite seu e-mail" />
+                <input type="password" placeholder="Digite sua senha" />
+                <div className='actions'>
+                    <Button className='button_to_enter' onClick={() => {navigate('/home')}}>Entrar</Button>
+                    <a href=''>Cadastre-se</a>
+                </div>
             </div>
         </div>
     );
