@@ -1,12 +1,16 @@
 import React from 'react';
 import { Button } from 'react-materialize';
 import logo from '../../assets/condogenius.png';
-import { useNavigate } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 import './login.scss';
 
 const Login = () => {
-    const navigate = useNavigate();
+    const history = useHistory();
+
+    const navigateToHome = () => {
+        history.push('/home');
+    };
 
     return (
         <div className='login_content'>
@@ -15,7 +19,7 @@ const Login = () => {
                 <input type="text" placeholder="Digite seu e-mail" />
                 <input type="password" placeholder="Digite sua senha" />
                 <div className='actions'>
-                    <Button className='button_to_enter' onClick={() => {navigate('/home')}}>Entrar</Button>
+                    <Button className='button_to_enter' onClick={navigateToHome}>Entrar</Button>
                     <a href=''>Cadastre-se</a>
                 </div>
             </div>
