@@ -1,21 +1,23 @@
-FROM node:18-alpine as build
+# Usa uma imagem base do Node.js
+FROM node:14-alpine
 
+# Define o diretório de trabalho dentro do contêiner
 WORKDIR /app
 
-ENV PATH /app/node_modules/.bin:$PATH
-
+# Copia os arquivos de package.json e package-lock.json para o diretório de trabalho
 COPY package*.json ./
-RUN npm ci
-# Instala as bibliotecas devDependences e --silent pra nao ficar aparecendo no console as mensagens de instgalacao
-COPY . ./
+
+# Instala as dependências do projeto
+RUN npm install
+
+# Copia o restante dos arquivos do projeto para o diretório de trabalho
+COPY . .
+
+# Compila o projeto React
 RUN npm run build
 
-# SERVER
-FROM nginx:stable-alpine
-
-COPY --from=build /app/build /usr/share/nginx/html
-COPY ./.docker/nginx.conf /etc/nginx/conf.d/default.conf
-
+# Define a porta em que o aplicativo irá rodar dentro do contêiner
 EXPOSE 3000
 
-CMD ["nginx", "-g", "deamon off;"]
+# Comando para iniciar o aplicativo quando o contêiner for iniciado
+CMD [ "npm", "start" ]
